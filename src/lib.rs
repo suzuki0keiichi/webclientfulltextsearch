@@ -62,7 +62,7 @@ pub fn add_filter(contents: JsValue) {
     let mut bit_indexes = BIT_INDEXES.lock().unwrap();
     let bit_len = Bloom::<String>::compute_bitmap_size(BLOOM_ITEMS_COUNT, BLOOM_FP_RATE) * 8;
 
-    // randomの値を全体で統一するために先頭のものを使い回す ない場合は新規に作る
+    // randomの値を全体で統一するために先頭のものを使い回す ない場合は新規に作る (ひょっとしたらもともと同一seedかもしれない)
     let sip_keys: [(u64, u64); 2] = if filters.len() > 0 {
         filters[0].bloom.sip_keys()
     } else {
