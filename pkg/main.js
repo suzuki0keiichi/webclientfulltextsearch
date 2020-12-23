@@ -24,6 +24,10 @@ function convert(contents, nii_contents_map, nii_contents) {
             text += tag + " ";
         }
 
+        if (nii_content.category != null) {
+            text += nii_content.category + " ";
+        }
+
         text += nii_content.description;
 
         const content = {id: nii_content.video_id, text: text};
@@ -77,9 +81,10 @@ async function run() {
 function s() {
     const input = document.getElementById("search_word");
     const start = performance.now();
-    const ids = search(input.value);
 
     console.log("search " + input.value);
+
+    const ids = search(input.value);
 
     input.value = "";
 
