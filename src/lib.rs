@@ -15,7 +15,7 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 const BLOOM_ITEMS_COUNT: usize = 500;
-const BLOOM_FP_RATE: f64 = 0.05;
+const BLOOM_FP_RATE: f64 = 0.01;
 
 struct Filter {
     id: String,
@@ -122,6 +122,8 @@ pub fn search(text: String) -> JsValue {
             }
         }
     }
+
+    log(format!("found {} not_found {} total {}", found.len(), not_found.len(), filters.len()).as_str());
 
     JsValue::from_serde(&found).unwrap()
 }
