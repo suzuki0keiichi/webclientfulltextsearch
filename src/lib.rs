@@ -123,8 +123,6 @@ pub fn search(text: String) -> JsValue {
         }
     }
 
-    log(format!("found {} not_found {} total {}", found.len(), not_found.len(), filters.len()).as_str());
-
     JsValue::from_serde(&found).unwrap()
 }
 
