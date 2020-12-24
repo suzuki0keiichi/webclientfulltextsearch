@@ -1,5 +1,5 @@
 Qiitaでアドベントカレンダー記事を書くために作られたプログラムです。
-詳しい情報はQiita記事を見てください。
+詳しい情報は[Qiita記事](https://qiita.com/suzuki0keiichi@github/items/f2e8c08ad88ea43e2ce5)を見てください。
 
 # 注意書き
 * 動かすことに注力しているのでRustで高コスパな書き方になっていません
