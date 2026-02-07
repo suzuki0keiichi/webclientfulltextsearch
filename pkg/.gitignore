@@ -1,1 +1,3 @@
-*
+# wasm-pack generates this as "*" but we need pkg/ tracked for GitHub Pages.
+# Ignore only node_modules and local dev artifacts.
+node_modules/
