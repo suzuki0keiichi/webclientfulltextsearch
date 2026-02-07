@@ -4,6 +4,9 @@ version = "0.4.0"
 authors = ["suzuki0keiichi <suzuki0keiichi@gmail.com>"]
 edition = "2021"
 
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
 [lib]
 crate-type = ["cdylib", "rlib"]
 
